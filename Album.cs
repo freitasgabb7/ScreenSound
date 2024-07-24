@@ -10,9 +10,9 @@
     public void ExibirMusicasAlbum()
     {
         Console.WriteLine($"Lista de músicas do álbum: {Nome}\n");
+        int i = 1;
         foreach (var musica in musicas)
         {
-            int i = 1;
             Console.WriteLine($"{i}. {musica.Nome}");
             i++;
         }
