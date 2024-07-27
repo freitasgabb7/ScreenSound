@@ -2,6 +2,7 @@
 {
     public string Nome { set; get; }
     public string Artista { set; get; }
+    public Genero Genero { get; set; }
     public int Duracao { set; get; }
     public bool Disponivel { set; get; }
     public string DescricaoResumida =>
