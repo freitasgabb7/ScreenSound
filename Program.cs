@@ -1,16 +1,25 @@
-﻿Album sleepToken2023 = new Album();
-sleepToken2023.Nome = "Take Me Back To Eden";
+﻿Genero alternativeMetal = new Genero("Alternative Metal");
 
-Musica musica1 = new Musica();
-musica1.Nome = "Chokehold";
-musica1.Artista = "Sleep Token";
-musica1.Duracao = 304;
+Banda sleepToken = new Banda("Sleep Token");
 
-Musica musica2 = new Musica();
-musica2.Nome = "The Summoning";
-musica2.Artista = "Sleep Token";
-musica2.Duracao = 395;
+Album sleepToken2023 = new Album("Take Me Back To Eden");
+
+Musica musica1 = new Musica(sleepToken, "Chokehold", alternativeMetal)
+{
+    Duracao = 304,
+    Disponivel = true,
+};
+
+Musica musica2 = new Musica(sleepToken, "The Summoning", alternativeMetal)
+{
+    Duracao = 395,
+    Disponivel = false,
+};
 
 sleepToken2023.AdicionarMusica(musica1);
 sleepToken2023.AdicionarMusica(musica2);
+sleepToken.AdicionarAlbum(sleepToken2023);
+musica1.ExibirFichaTecnica();
+musica2.ExibirFichaTecnica();
 sleepToken2023.ExibirMusicasAlbum();
+sleepToken.ExibirDiscografia();
