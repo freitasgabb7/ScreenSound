@@ -4,6 +4,5 @@
     {
         Nome = nome;
     }
-
     public string Nome { get; }
 }
